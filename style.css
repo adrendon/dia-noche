@@ -39,6 +39,10 @@ a:focus {
 	.notPadding {
 		padding: 0 !important;
 	}
+	.pad {
+		padding-left: 8px !important;
+		padding-right: 8px !important;
+	}
 }
 .uppercase{
 	text-transform: uppercase;
@@ -55,7 +59,7 @@ a:focus {
 }
 .inline{
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 .fullImg {
 	width: 100%;
@@ -437,7 +441,7 @@ textarea:focus {
     content: "\e606";
 }
 .accesos__body > div:first-child strong {
-    width: 60%;
+    width: 64%;
     display: inline-block;
     text-align: left;
     vertical-align: middle;
@@ -455,7 +459,7 @@ textarea:focus {
 	margin-left: 2em;
 }
 .content {
-	margin: 2.5em 0;
+	margin-top: 2.5em;
 }
 .site__body {
 	color: #7a7a7a
@@ -479,6 +483,7 @@ textarea:focus {
 	position: absolute;
 	top: 0;
 	width: 3px;
+	bottom: 0;
 }
 .site__body--content {
 	font-family: 'PT Sans', sans-serif;
@@ -488,11 +493,13 @@ textarea:focus {
 .site__body--content ul {
 	padding-left: 25px;
 }
-.site__body--content li {
+.site__body--content li,
+.arbol li {
 	padding-left: 12px;
 	position: relative;
 }
-.site__body--content li:before {
+.site__body--content li:before,
+.arbol li:before {
 	position: absolute;
 	content: '';
 	width: 0;
@@ -505,11 +512,14 @@ textarea:focus {
 	bottom: 0;
 	margin: auto;
 }
-.site__body--content a {
+.site__body--content a,
+.arbol a {
 	color: #7a7a7a;
 }
 .site__body--content a:hover,
-.site__body--content a:focus {
+.arbol a:hover,
+.site__body--content a:focus,
+.arbol a:focus {
 	color: #7a7a7a;
 }
 .delegaciones {
@@ -518,6 +528,12 @@ textarea:focus {
 }
 .delegaciones h3 {
     margin-bottom: 0.5em;
+}
+.delegaciones h3:before {
+	height: 60%;
+}
+.delegaciones ul {
+	padding-left: 8px;
 }
 .delegaciones li {
 	border-bottom: solid 1px #d2d0d0;
@@ -558,7 +574,7 @@ textarea:focus {
 	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
 	font-weight: bold;
-	padding: 5px 0 0 10px;
+	padding: 5px 0 0 28px;
 	text-transform: capitalize;
 }
 .delegaciones span {
@@ -573,18 +589,128 @@ textarea:focus {
 	background: #2e375e;
 	position: relative;
 }
+.oferta {
+	margin: 4.5em 0;
+}
 .oferta article {
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: 2%;
+	top: 20%;
+}
+.oferta strong {
+	color: #edd600;
+	font-size: 42px;
+}
+.oferta figcaption {
+	color: #fff;    
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.3px;
+}
+.arbol {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+	margin-bottom: 2.5em;
+}
+.arbol ul {
+	padding-left: 12px;
+	margin: 1.8em 0;
+}
+.arbol h4 {
+	color: #403f3f;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 1.5em 0;
+}
+.arbol p {
+	margin-top: 0;
 }
 .arbol span {
+	border-top: solid 1px #2e375e;
+	color: #a6a4a4;
+	cursor: pointer;
 	display: block;
+	font-family: 'Ruda', sans-serif;
+	font-weight: bold;
+	padding-top: 0.8em;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
+.arbol span:before {
+	border-color: transparent transparent #2e375e transparent;
+	border-style: solid;
+	border-width: 0 6px 6px 6px;
+	content: '';
+	height: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: -6px;
+	width: 0;
+}
+.site__footer {
+	font-size: 12px;
+}
+.site__footer--content {
+	padding: 1.5em 0;
+}
+.menu__legales {
+	color: #edd600;
+	line-height: 20px;
+	margin-left: 2.5em;
+}
+.menu__legales a,
+.menu__legales a:hover,
+.menu__legales a:focus {
+	color: #edd600;
+}
+.menu__legales a:hover {
+	text-decoration: none;
+}
+.menu__legales span a {
+	display: inline-block;
+}
+.reparaciones__urgentes {
+	color: #edd600;
+	float: right;
+	font-weight: bold;
+	margin-right: 1.5em;
+}
+.reparaciones {
+	position: relative;
+	padding-left: 4.5em;
+}
+.reparaciones:before {
+	bottom: 0;
+	color: #edd600;
+	content: "\e600";
+	font-family: 'icomoon';
+	font-size: 44px;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	top: 0;
+}
+.reparaciones__urgentes small,
+.reparaciones__urgentes strong,
+.reparaciones__urgentes span {
+	display: block;
+}
+.reparaciones__urgentes small {
+	font-size: 15px;
+}
+.reparaciones__urgentes strong {
+	font-size: 22px;
+}
+.reparaciones__urgentes span {
+    font-size: 28px;
+}
 .aviso {
 	background: #212a52;
+	color: #606ca3;
+	padding: 0.8em 0;
 	position: relative;
 }
 .aviso:before,
@@ -602,7 +728,6 @@ textarea:focus {
 .aviso:after{
 	left: 100%;
 }
-
 @font-face {
 	font-family: 'icomoon';
 	src:url('fonts/icomoon.eot?jlpnbk');
